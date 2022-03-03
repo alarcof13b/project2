@@ -1,11 +1,11 @@
-# Project Setup
+# Project Setup for Francisco Alarco IS601
 
 [![Production Workflow](https://github.com/alarcof13b/anotherflask2/actions/workflows/heroku_awake_prod.yml/badge.svg)](https://github.com/alarcof13b/anotherflask2/actions/workflows/heroku_awake_prod.yml)
 
 * [Production Deployment](https://alarcof13b-prod.herokuapp.com/)
 
 
-[![Development Workflow](https://github.com/alarcof13b/anotherflask2/actions/workflows/heroku_awake_dev.yml/badge.svg)](https://github.com/alarcof13b/anotherflask2/actions/workflows/heroku_awake_dev.yml)
+[![Development Workflow](https://github.com/alarcof13b/anotherflask2/actions/workflows/dev.yml/badge.svg)](https://github.com/alarcof13b/anotherflask2/actions/workflows/dev.yml)
 
 * [Developmental Deployment](https://alarcof13b-dev.herokuapp.com/)
 
