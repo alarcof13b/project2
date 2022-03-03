@@ -1,13 +1,13 @@
 # Project Setup
 
-[![Production Workflow](https://github.com/kaw393939/docker_flask/actions/workflows/prod.yml/badge.svg)](https://github.com/kaw393939/docker_flask/actions/workflows/prod.yml)
+[![Production Workflow](https://github.com/alarcof13b/anotherflask2/actions/workflows/heroku_awake_prod.yml/badge.svg)](https://github.com/alarcof13b/anotherflask2/actions/workflows/heroku_awake_prod.yml)
 
-* [Production Deployment](https://kwilliam-prod.herokuapp.com/)
+* [Production Deployment](https://alarcof13b-prod.herokuapp.com/)
 
 
-[![Development Workflow](https://github.com/kaw393939/docker_flask/actions/workflows/dev.yml/badge.svg)](https://github.com/kaw393939/docker_flask/actions/workflows/dev.yml)
+[![Development Workflow](https://github.com/alarcof13b/anotherflask2/actions/workflows/heroku_awake_dev.yml/badge.svg)](https://github.com/alarcof13b/anotherflask2/actions/workflows/heroku_awake_dev.yml)
 
-* [Developmental Deployment](https://kwilliam-dev.herokuapp.com/)
+* [Developmental Deployment](https://alarcof13b-dev.herokuapp.com/)
 
 ## Setting up CI/CD
 
