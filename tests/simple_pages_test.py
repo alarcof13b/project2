@@ -8,7 +8,7 @@ def test_request_main_menu_links(client):
     assert b'<a href="/git" class="nav-link text-white">Git</a>' in response.data
     assert b'<a href="/docker" class="nav-link text-white">Docker</a>' in response.data
     assert b'<a href="/python" class="nav-link text-white">Python</a>' in response.data
-    assert b'<a href="/cid" class="nav-link text-white">CID</a>' in response.data
+    assert b'<a href="/cicd" class="nav-link text-white">CI/CD</a>' in response.data
 
 def test_request_index(client):
     """This makes the index page"""
@@ -42,9 +42,9 @@ def test_request_page3(client):
 
 def test_request_page4(client):
     """This makes the index page"""
-    response = client.get("/cid")
+    response = client.get("/cicd")
     assert response.status_code == 200
-    assert b"CID" in response.data
+    assert b"CI/CD" in response.data
 
 def test_request_page_not_found(client):
     """This makes the index page"""
