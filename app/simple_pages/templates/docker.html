@@ -88,16 +88,21 @@
     <div class="sections">
         <div class="row featurette">
             <div class="col-md-10">
-                <h2 class="featurette-heading">Repositories. <span
-                        class="text-muted">Saving versions of your work.</span></h2>
-                <p class="lead">A repository contains all of your project's files and each file's revision
-                    history. You can discuss and manage your project's work within the repository. You can own
-                    repositories individually, or you can share ownership of repositories with other people in
-                    an organization or collaboration.</p>
+                <h2 class="featurette-heading">Docker Commands. <span
+                        class="text-muted">Working on the Terminal.</span></h2>
+                <p class="lead">Docker compose file is what creates/orchestrates everything. This combination of files
+                    is also considered an app. Tells data center cloud what resources are needed to run the application.
+                    The data center automation is made up of these docker files and compose files, and Docker packages
+                    up applications; these files are for: database, database web server, program. Each docker container,
+                    each app will have a docker-compose file (programing language is Python). The Docker-compose file
+                    (orchestration file) is the registration file, it ties everything together. Gives instructions to
+                    start up and run programing language, and open up the network ie 8080. Nginx is the web server, this
+                    is the networking connecting to the outside world.
+                </p>
             </div>
             <div class="col-md-12">
                 <div class="section-img"><img
-                        src="https://backlog.com/app/themes/backlog-child/assets/img/guides/git/basics/creating_a_repository_001.png"
+                        src="https://www.cprime.com/wp-content/uploads/2020/12/5-Docker-Commands-You-Need-to-Know-Img-2.png"
                         alt=""></div>
             </div>
         </div>
@@ -108,17 +113,24 @@
     <div class="sections">
         <div class="row featurette">
             <div class="col-md-10">
-                <h2 class="featurette-heading">Tags. <span
-                        class="text-muted">Marking different points.</span></h2>
-                <p class="lead">Git Tags are specific reference points in the Git history. Git tags are used to capture
-                    the specific point in the history that is further used to point to a released version. A tag does
-                    not change like a branch. They don’t have a further history of commits after being created. Most
-                    people use this feature to mark some release points like (v1.0,…v4.0, and so on). In simple words,
-                    Git Tags are used to give some meaningful name to a particular in the git project repository.
-                    Suppose two users decide to tag their project code for access later.</p>
+                <h2 class="featurette-heading">Steps. <span
+                        class="text-muted">Setting it up.</span></h2>
+                <p class="lead">It is important to work directly on the command line. The following set of instructions are needed to set up Docker. </p>
+                <ul>
+                    <li>Start with the command "docker login".</li>
+                    <li>Then establish the ports to be used "docker run -itp 80:80 ubuntu".</li>
+                    <li>This line "apt-get update" allows to download apps.</li>
+                    <li>Install apps using the command line "apt-get install vim apache2 w3c". </li>
+                    <li>Configure server "apachectl start" (check is server is running in local host).</li>
+                    <li>Check the status "apachectl status".</li>
+                    <li>Create directories with "mkdir".</li>
+                    <li>Create files "touch index.html", don't forget to add the css and js files as well.</li>
+                    <li>Type "docker ps" to get the container id.</li>
+                    <li>Use the "docker commit" and "docker push" to add in the container.</li>
+                </ul>
             </div>
             <div class="col-md-12">
-                <div class="section-img"><img src="https://i.stack.imgur.com/EwBtF.jpg" alt=""></div>
+                <div class="section-img"><img src="https://lh6.googleusercontent.com/OLNkuRtYmA-8DwJ1-gSM9HL4Uxu56ae3yX5deu9997DXNtNEFbaAnuwSTlKFbAlmwH8GqJohKNow8gpDbUj_LPqW1sfXBu7CLDFB2cL5jqCuuLiOc89AKdH2yiYkq-37EdnePetq" alt=""></div>
             </div>
         </div>
     </div><!-- /.container -->
