@@ -1,39 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
-     <div class="title-header">
+    <div class="title-header">
         <h1>DOCKER</h1>
         <div class="logo-div"><img src="../../static/images/dockerlogo.svg" class="logo-img" alt=""></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut blanditiis consectetur dicta, incidunt
-            laboriosam magni modi necessitatibus obcaecati quis totam voluptates! Amet doloribus et nesciunt, possimus
-            ullam vitae voluptate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut blanditiis
-            consectetur dicta, incidunt
-            laboriosam magni modi necessitatibus obcaecati quis totam voluptates! Amet doloribus et nesciunt, possimus
-            ullam vitae voluptateLorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut blanditiis
-            consectetur dicta, incidunt
-            laboriosam magni modi necessitatibus obcaecati quis totam voluptates! Amet doloribus et nesciunt, possimus
-            ullam vitae voluptate</p>
+        <p>Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate
+            your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage
+            your infrastructure in the same ways you manage your applications. By taking advantage of Docker’s
+            methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay
+            between writing code and running it in production. Docker provides the ability to package and run an
+            application in a loosely isolated environment called a container. The isolation and security allows you to
+            run many containers simultaneously on a given host. Containers are lightweight and contain everything needed
+            to run the application, so you do not need to rely on what is currently installed on the host. You can
+            easily share containers while you work, and be sure that everyone you share with gets the same container
+            that works in the same way.</p>
     </div>
 
-     <hr class="featurette-divider">  <!-- /Section 1 -->
+    <hr class="featurette-divider">  <!-- /Section 1 -->
 
     <div class="sections">
         <div class="row featurette">
             <div class="col-md-10">
-                <h2 class="featurette-heading">Branching. <span
-                        class="text-muted">Working on different versions.</span></h2>
-                <p class="lead">The way Git branches is incredibly lightweight, making
-                    branching operations nearly instantaneous, and switching back and forth between branches generally
-                    just as
-                    fast. Git encourages workflows that branch and merge often, even multiple times in a
-                    day. Understanding and mastering this feature gives you a powerful and unique tool and can entirely
-                    change
-                    the way that you develop. Git doesn’t store data as a series of change sets or differences, but
-                    instead as a
-                    series of snapshots.</p>
+                <h2 class="featurette-heading">Containers vs. Virtual Machines. <span
+                        class="text-muted">Understanding the differences.</span></h2>
+                <p class="lead">Docker containers and virtual machines are both ways of deploying applications inside
+                    environments that are isolated from the underlying hardware. The chief difference is the level of
+                    isolation. With a container runtime like Docker, your application is sandboxed inside of the
+                    isolation features that a container provides, but still shares the same kernel as other containers
+                    on the same host. As a result, processes running inside containers are visible from the host system
+                    (given enough privileges for listing all processes). Having multiple containers share the same
+                    kernel allows the end user to bin-pack
+                    lots and lots of containers on the same machine with near-instant start time. Also, as a consequence
+                    of containers not needing to embed a full OS, they are very lightweight, commonly around 5-100
+                    MB.</p>
+                <p class="lead">In contrast, with a virtual machine, everything running inside the VM is independent of
+                    the host operating system, or hypervisor. The virtual machine platform starts a process (called
+                    virtual machine monitor, or VMM) in order to manage the virtualization process for a specific VM,
+                    and the host system allocates some of its hardware resources to the VM. However, what’s
+                    fundamentally different with a virtual machine is that at start time, it boots a new, dedicated
+                    kernel for this VM environment, and starts a (often rather large) set of operating system processes.
+                    This makes the size of the VM much larger than a typical container that only contains the
+                    application.</p>
             </div>
             <div class="col-md-12">
                 <div class="section-img"><img
-                        src="https://www.nobledesktop.com/image/gitresources/git-branches-merge.png" alt=""></div>
+                        src="https://images.contentstack.io/v3/assets/blt300387d93dabf50e/bltb6200bc085503718/5e1f209a63d1b6503160c6d5/containers-vs-virtual-machines.jpg"
+                        alt=""></div>
             </div>
         </div>
     </div>
@@ -43,20 +54,30 @@
     <div class="sections">
         <div class="row featurette">
             <div class="col-md-10">
-                <h2 class="featurette-heading">Committing the change. <span
-                        class="text-muted">The setup.</span></h2>
-                <p class="lead">The way Git branches is incredibly lightweight, making
-                    branching operations nearly instantaneous, and switching back and forth between branches
-                    generally just as
-                    fast. Git encourages workflows that branch and merge often, even multiple times in a
-                    day. Understanding and mastering this feature gives you a powerful and unique tool and can
-                    entirely change
-                    the way that you develop. Git doesn’t store data as a series of changesets or differences, but
-                    instead as a
-                    series of snapshots.</p>
+                <h2 class="featurette-heading">Docker Image. <span
+                        class="text-muted">The snapshot.</span></h2>
+                <p class="lead">The Docker daemon (dockerd) listens for Docker API requests and manages Docker objects
+                    such as images, containers, networks, and volumes. A daemon can also communicate with other daemons
+                    to manage Docker services. A Docker registry stores Docker images. Docker Hub is a public registry
+                    that anyone can use, and Docker is configured to look for images on Docker Hub by default. You can
+                    even run your own private registry. When you use the docker pull or docker run commands, the
+                    required images are pulled from your
+                    configured registry. When you use the docker push command, your image is pushed to your configured
+                    registry. When you use Docker, you are creating and using images, containers, networks, volumes,
+                    plugins, and other objects. This section is a brief overview of some of those objects. </p>
+                <p class="lead">An image is a read-only template with instructions for creating a Docker container.
+                    Often, an image is based on another image, with some additional customization. For example, you may
+                    build an image which is based on the ubuntu image, but installs the Apache web server and your
+                    application, as well as the configuration details needed to make your application run. You might
+                    create your own images or you might only use those created by others and published in a
+                    registry. To build your own image, you create a Dockerfile with a simple syntax for defining the
+                    steps needed to create the image and run it. Each instruction in a Dockerfile creates a layer in the
+                    image. When you change the Dockerfile and rebuild the image, only those layers which have changed
+                    are rebuilt. This is part of what makes images so lightweight, small, and fast, when compared to
+                    other virtualization technologies.</p>
             </div>
             <div class="col-md-12">
-                <div class="section-img"><img src="https://miro.medium.com/max/1204/1*OqKfKe3mqCRbaWT2Y8YDOQ.png"
+                <div class="section-img"><img src="https://trishnag.files.wordpress.com/2016/04/docker1.jpg"
                                               alt=""></div>
             </div>
         </div>

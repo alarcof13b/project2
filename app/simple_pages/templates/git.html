@@ -23,13 +23,15 @@
                         class="text-muted">Working on different versions.</span></h2>
                 <p class="lead">The way Git branches is incredibly lightweight, making
                     branching operations nearly instantaneous, and switching back and forth between branches generally
-                    just as
-                    fast. Git encourages workflows that branch and merge often, even multiple times in a
-                    day. Understanding and mastering this feature gives you a powerful and unique tool and can entirely
-                    change
-                    the way that you develop. Git doesn’t store data as a series of change sets or differences, but
-                    instead as a
-                    series of snapshots.</p>
+                    just as fast. Git encourages workflows that branch and merge often, even multiple times in a
+                    day. Git doesn’t store data as a series of change sets or differences, but
+                    instead as a series of snapshots. Using branches allows the developer to segregate and
+                    compartmentalize different parts of an application. For example, different programmer can work on
+                    different functions or features of the app, simultaneously in different locations, this allows for
+                    better collaboration, while also ensuring the quality of the final product. Branching also allows to
+                    work on the project piece by piece, while testing it and validating the usefulness of the new
+                    code. To adda a branch type "git branch [branch-name], to switch to another branch type "git
+                    checkout [branch]".</p>
             </div>
             <div class="col-md-12">
                 <div class="section-img"><img
@@ -44,16 +46,12 @@
         <div class="row featurette">
             <div class="col-md-10">
                 <h2 class="featurette-heading">Committing the change. <span
-                        class="text-muted">The setup.</span></h2>
-                <p class="lead">The way Git branches is incredibly lightweight, making
-                    branching operations nearly instantaneous, and switching back and forth between branches
-                    generally just as
-                    fast. Git encourages workflows that branch and merge often, even multiple times in a
-                    day. Understanding and mastering this feature gives you a powerful and unique tool and can
-                    entirely change
-                    the way that you develop. Git doesn’t store data as a series of changesets or differences, but
-                    instead as a
-                    series of snapshots.</p>
+                        class="text-muted">Before the Push.</span></h2>
+                <p class="lead">Git commits are used to let the program now that all the new code or changes made to the
+                    application are ready to be sent or "pushed" up to the master or main branch which is also known as
+                    the production branch. This also a time to add any comments that give description to the changes or
+                    updates to the code. The commad to add a commit is "git commit -m [message], "git merge [branch]"
+                    merges the specific branch's history into the current one </p>
             </div>
             <div class="col-md-12">
                 <div class="section-img"><img src="https://miro.medium.com/max/1204/1*OqKfKe3mqCRbaWT2Y8YDOQ.png"
@@ -100,12 +98,32 @@
                 <div class="section-img"><img src="https://i.stack.imgur.com/EwBtF.jpg" alt=""></div>
             </div>
         </div>
-    </div><!-- /.container -->
+    </div>
 
-    <!-- /END THE FEATURETTES -->
+    <hr class="featurette-divider">  <!-- /Section 5 -->
+
+
+    <div class="sections">
+        <div class="row featurette">
+            <div class="col-md-10">
+                <h2 class="featurette-heading">GitHub. <span
+                        class="text-muted">The Repository Hub</span></h2>
+                <p class="lead">GitHub is an online software development platform used for storing, tracking, and
+                    collaborating on software projects. It enables developers to upload their own code files and to
+                    collaborate with fellow developers on open-source projects. GitHub also serves as a social
+                    networking site in which developers can openly network, collaborate, and pitch their work.</p>
+            </div>
+            <div class="col-md-12">
+                <div class="section-img"><img
+                        src="https://www.classicpress.net/wp-content/uploads/2021/10/review-pr-github-desktop-tutorial.jpg"
+                        alt=""></div>
+            </div>
+        </div>
+    </div>
 
     <hr class="featurette-divider">
 
+    <!-- /END THE FEATURETTES -->
 
 
 {% endblock %}
