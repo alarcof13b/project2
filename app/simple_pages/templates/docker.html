@@ -97,8 +97,41 @@
                     each app will have a docker-compose file (programing language is Python). The Docker-compose file
                     (orchestration file) is the registration file, it ties everything together. Gives instructions to
                     start up and run programing language, and open up the network ie 8080. Nginx is the web server, this
-                    is the networking connecting to the outside world.
+                    is the networking connecting to the outside world. Docker (containerization): allows different
+                    applications to share 1 kernel and all of the infrastructure resources, each app would have its own
+                    IP address for example, from a network point of view, each app is seen as a separate computer.
+                    Allows to more effectively manage resources. Some constraints are include the fact that it can only
+                    run 1 kernel.
                 </p>
+                <li>WSL2 - Windows Subsystem for Linux 2 - it’s a manager, provides access to the hypervisor, enables
+                    hardware virtualization or hypervisor to have multiple kernels, creates a VM out of windows computer
+                    that you can install linux on. Must be enabled. Make sure windows is completely updated.
+                </li>
+                <li>Docker desktop (the containerization engine), Docker Hub (container registry). First engine people
+                    had access to. The cloud is containerization technology.
+                </li>
+                <li>Kubernetes, a containerization engine used by google/facebook to manage their infrastructure. It can
+                    also be looked at as an operating system for a data center and allows to run different kernels. i.e
+                    if you 1000 computers in a data center that you want to manage and want to provide cloud computing,
+                    the use kubernetes.
+                </li>
+                <li>Docker compose file is what creates/orchestrates everything. This combination of files is also
+                    considered an app. Tells data center cloud what resources are needed to run the application.
+                </li>
+                <li> A data center automation is made up of these docker files and compose files.</li>
+                <li>
+                    Docker files for: database, database web server, program. Each docker container, each app will have
+                    a docker-compose file (programing language is Python).
+                </li>
+                <li>Github stores source code, it builds the image from the desktop and sends it to the registry, once
+                    that is done github tells the cloud to get the image from the registry
+                    Dockerhub stores the image (app program) of running the app, data base server, and anything needed
+                    to be run in the cloud.
+                </li>
+                <li>App-get update (apt= aptitude package mgr is like an app store where system updates or apps come
+                    from) this command will connect the computer to the programs repository. This must be done before
+                    downloading any app.
+                </li>
             </div>
             <div class="col-md-12">
                 <div class="section-img"><img
@@ -115,23 +148,28 @@
             <div class="col-md-10">
                 <h2 class="featurette-heading">Steps. <span
                         class="text-muted">Setting it up.</span></h2>
-                <p class="lead">It is important to work directly on the command line. The following set of instructions are needed to set up Docker: </p>
+                <p class="lead">It is important to work directly on the command line. The following set of instructions
+                    are needed to set up Docker: </p>
                 <ul>
                     <li>Start with the command "docker login".</li>
                     <li>Then establish the ports to be used "docker run -itp 80:80 ubuntu".</li>
                     <li>This line "apt-get update" allows to download apps.</li>
-                    <li>Install apps using the command line "apt-get install vim apache2 w3c". </li>
+                    <li>Install apps using the command line "apt-get install vim apache2 w3c".</li>
                     <li>Configure server "apachectl start" (check is server is running in local host).</li>
                     <li>Check the status "apachectl status".</li>
                     <li>Create directories with "mkdir".</li>
                     <li>Create files "touch index.html", don't forget to add the css and js files as well.</li>
                     <li>Type "docker ps" to get the container id.</li>
                     <li>Use the "docker commit" and "docker push" to add in the container.</li>
-                    <li>See Docker Repository link: <a href="https://hub.docker.com/repository/docker/alarcof1/alarcof-project1">FHA Docker Repository</a></li>
+                    <li>See Docker Repository link: <a
+                            href="https://hub.docker.com/repository/docker/alarcof1/alarcof-project1" target="_blank" rel="noopener noreferrer">FHA Docker
+                        Repository</a></li>
                 </ul>
             </div>
             <div class="col-md-12">
-                <div class="section-img"><img src="https://lh6.googleusercontent.com/OLNkuRtYmA-8DwJ1-gSM9HL4Uxu56ae3yX5deu9997DXNtNEFbaAnuwSTlKFbAlmwH8GqJohKNow8gpDbUj_LPqW1sfXBu7CLDFB2cL5jqCuuLiOc89AKdH2yiYkq-37EdnePetq" alt=""></div>
+                <div class="section-img"><img
+                        src="https://lh6.googleusercontent.com/OLNkuRtYmA-8DwJ1-gSM9HL4Uxu56ae3yX5deu9997DXNtNEFbaAnuwSTlKFbAlmwH8GqJohKNow8gpDbUj_LPqW1sfXBu7CLDFB2cL5jqCuuLiOc89AKdH2yiYkq-37EdnePetq"
+                        alt=""></div>
             </div>
         </div>
     </div><!-- /.container -->

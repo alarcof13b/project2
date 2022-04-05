@@ -1,39 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="title-header">
-        <h1>PYTHON</h1>
+        <h1>PYTHON / FLASK</h1>
         <div class="logo-div"><img src="../../static/images/pythonlogo.svg" class="logo-img" alt=""></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut blanditiis consectetur dicta, incidunt
-            laboriosam magni modi necessitatibus obcaecati quis totam voluptates! Amet doloribus et nesciunt, possimus
-            ullam vitae voluptate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut blanditiis
-            consectetur dicta, incidunt
-            laboriosam magni modi necessitatibus obcaecati quis totam voluptates! Amet doloribus et nesciunt, possimus
-            ullam vitae voluptateLorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut blanditiis
-            consectetur dicta, incidunt
-            laboriosam magni modi necessitatibus obcaecati quis totam voluptates! Amet doloribus et nesciunt, possimus
-            ullam vitae voluptate</p>
+        <p>Flask is a micro web framework written in Python. It is classified as a microframework because it does not
+            require particular tools or libraries. It has no database abstraction layer, form validation, or any other
+            components where pre-existing third-party libraries provide common functions. It can also be considered a
+            back-end framework,
+            which means that it provides the technologies, tools, and modules that can be used to build the actual
+            functionalities of the web app rather than the design or look of it.</p>
     </div>
 
-     <hr class="featurette-divider">  <!-- /Section 1 -->
+    <hr class="featurette-divider">  <!-- /Section 1 -->
 
     <div class="sections">
         <div class="row featurette">
             <div class="col-md-10">
-                <h2 class="featurette-heading">Branching. <span
-                        class="text-muted">Working on different versions.</span></h2>
-                <p class="lead">The way Git branches is incredibly lightweight, making
-                    branching operations nearly instantaneous, and switching back and forth between branches generally
-                    just as
-                    fast. Git encourages workflows that branch and merge often, even multiple times in a
-                    day. Understanding and mastering this feature gives you a powerful and unique tool and can entirely
-                    change
-                    the way that you develop. Git doesn’t store data as a series of change sets or differences, but
-                    instead as a
-                    series of snapshots.</p>
+                <h2 class="featurette-heading">Testing. <span
+                        class="text-muted">Automating and Validating.</span></h2>
+                <p class="lead">PyTest is a testing framework that allows users to write test codes using Python
+                    programming language. It helps you to write simple and scalable test cases for databases, APIs, or
+                    UI. PyTest is mainly used for writing tests for APIs. It helps to write tests from simple unit tests
+                    to complex functional tests.</p>
+                <li>Pytest allows you to set requirements that are either validated or failed during the test run.</li>
+                <li>The test folder inside project 1 contains files (.py) that are used to set testing parameters. This
+                    is where we make sure the code does what is supposed to do.
+                </li>
+                <li>Code Example: <br>def test_request_index(client): <br> response = client.get("/") <br> assert
+                    response.status_code == 200 <br>
+                    assert b"Home" in response.data
+                </li>
             </div>
             <div class="col-md-12">
-                <div class="section-img"><img
-                        src="https://www.nobledesktop.com/image/gitresources/git-branches-merge.png" alt=""></div>
+                <div class="section-img"><img src="https://miro.medium.com/max/1400/1*2SYweCRRh6bJPPx8ofgyTQ.png"
+                                              alt=""></div>
             </div>
         </div>
     </div>
@@ -43,20 +43,26 @@
     <div class="sections">
         <div class="row featurette">
             <div class="col-md-10">
-                <h2 class="featurette-heading">Committing the change. <span
-                        class="text-muted">The setup.</span></h2>
-                <p class="lead">The way Git branches is incredibly lightweight, making
-                    branching operations nearly instantaneous, and switching back and forth between branches
-                    generally just as
-                    fast. Git encourages workflows that branch and merge often, even multiple times in a
-                    day. Understanding and mastering this feature gives you a powerful and unique tool and can
-                    entirely change
-                    the way that you develop. Git doesn’t store data as a series of changesets or differences, but
-                    instead as a
-                    series of snapshots.</p>
+                <h2 class="featurette-heading">Pages. <span
+                        class="text-muted">Creating content and testing it.</span></h2>
+                <p class="lead">I was able to add content into the html files using bootstrap v5, which is a css
+                    framework to build modern looking websites with pre-coded syntax, making it very handy and easy to
+                    use. The templates folder contains all html files that are rendered in the browser, and the content
+                    gets tested using pytest either on the terminal or when pushed to github.</p>
+                <ul>
+                    <li>We can start by cloning an existing repository or creating a new locally.</li>
+                    <li>Make sure all configuration files are present, docker files, .py and .yml files.</li>
+                    <li>Create a new branch "feature", this is where all the work will be done.</li>
+                    <li>Add content, and testing requires, including on push commands for the app to be tested in github
+                        and displayed on heroku.
+                    </li>
+                    <li>After pushing from local to remote, and all tests are done, rebase the remote master on to the
+                        local master.
+                    </li>
+                </ul>
             </div>
             <div class="col-md-12">
-                <div class="section-img"><img src="https://miro.medium.com/max/1204/1*OqKfKe3mqCRbaWT2Y8YDOQ.png"
+                <div class="section-img"><img src="https://miro.medium.com/max/1400/1*2SYweCRRh6bJPPx8ofgyTQ.png"
                                               alt=""></div>
             </div>
         </div>
@@ -67,16 +73,42 @@
     <div class="sections">
         <div class="row featurette">
             <div class="col-md-10">
-                <h2 class="featurette-heading">Repositories. <span
-                        class="text-muted">Saving versions of your work.</span></h2>
-                <p class="lead">A repository contains all of your project's files and each file's revision
-                    history. You can discuss and manage your project's work within the repository. You can own
-                    repositories individually, or you can share ownership of repositories with other people in
-                    an organization or collaboration.</p>
+                <h2 class="featurette-heading">Purpose. <span
+                        class="text-muted">What do these files do?.</span></h2>
+                <p class="lead">The combinations of all these files create the application itself which will get
+                    deployed to the cloud and browser. Here is a brief description of those files:</p>
+
+                <ul>
+                    <li>Project Root Folder: This is the main root folder where all the application files will be
+                        stored.
+                    </li>
+                    <li>Workflows: This folder contains the .yml files (dev, prod, and heroku). Actions, jobs, steps,
+                        logins, passwords, uses, etc.. are set
+                    </li>
+                    <li>Readme file: Contains instructions, directions and comments made by the author.</li>
+                    <li>Simple_pages/Templates Folder: Contains all hmtl files</li>
+                    <li>Static Folder: Contains the css file, images files, and js file.</li>
+                    <li>__init_.py: The main folder is our Python directory that we want to treat as if it were a Python
+                        package. <br>To be treated as such, we have to include an __init__.py file that relays this
+                        information to the Python interpreter.
+                    </li>
+                    <li>Tests Folder: Contains the .py tests syntax used to run the PyTest on requirements.</li>
+                    <li>.pylintrc: Helps execute semantics and "grammar" tests on code.</li>
+                    <li>Docker-compose.yml: This (orchestration file) is the registration file, it ties everything
+                        together. Gives instructions to start up and run programing language, and open up the network ie
+                        8080. Nginx is the web server, this is the networking connecting to the outside world.
+                    </li>
+                    <li>Dockerfile is a text document that contains all the commands a user could call on the command
+                        line to assemble an image. Using docker build users can create an automated build that executes
+                        several command-line instructions in succession.
+                    </li>
+                    <li>Link to <a href="https://github.com/alarcof13b/Project1" target="_blank" rel="noopener noreferrer">
+                        FHA Github</a></li>
+                </ul>
             </div>
             <div class="col-md-12">
                 <div class="section-img"><img
-                        src="https://backlog.com/app/themes/backlog-child/assets/img/guides/git/basics/creating_a_repository_001.png"
+                        src="https://www.socketxp.com/assets/img/remote-access-flask-app-from-internet/remote-access-flask-app-from-internet.png"
                         alt=""></div>
             </div>
         </div>
@@ -84,26 +116,8 @@
 
     <hr class="featurette-divider"> <!-- /Section 4 -->
 
-    <div class="sections">
-        <div class="row featurette">
-            <div class="col-md-10">
-                <h2 class="featurette-heading">Tags. <span
-                        class="text-muted">Marking different points.</span></h2>
-                <p class="lead">Git Tags are specific reference points in the Git history. Git tags are used to capture
-                    the specific point in the history that is further used to point to a released version. A tag does
-                    not change like a branch. They don’t have a further history of commits after being created. Most
-                    people use this feature to mark some release points like (v1.0,…v4.0, and so on). In simple words,
-                    Git Tags are used to give some meaningful name to a particular in the git project repository.
-                    Suppose two users decide to tag their project code for access later.</p>
-            </div>
-            <div class="col-md-12">
-                <div class="section-img"><img src="https://i.stack.imgur.com/EwBtF.jpg" alt=""></div>
-            </div>
-        </div>
-    </div><!-- /.container -->
+
 
     <!-- /END THE FEATURETTES -->
-
-    <hr class="featurette-divider">
 
 {% endblock %}
