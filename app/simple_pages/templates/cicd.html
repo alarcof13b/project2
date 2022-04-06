@@ -1,39 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
-     <div class="title-header">
+    <div class="title-header">
         <h1>CI/CD</h1>
         <div class="logo-div"><img src="../../static/images/cicdlogo.svg" class="logo-img" alt=""></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut blanditiis consectetur dicta, incidunt
-            laboriosam magni modi necessitatibus obcaecati quis totam voluptates! Amet doloribus et nesciunt, possimus
-            ullam vitae voluptate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut blanditiis
-            consectetur dicta, incidunt
-            laboriosam magni modi necessitatibus obcaecati quis totam voluptates! Amet doloribus et nesciunt, possimus
-            ullam vitae voluptateLorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut blanditiis
-            consectetur dicta, incidunt
-            laboriosam magni modi necessitatibus obcaecati quis totam voluptates! Amet doloribus et nesciunt, possimus
-            ullam vitae voluptate</p>
+        <p>CI/CD is a method to frequently deliver apps to customers by introducing automation into the stages of app
+            development. The main concepts attributed to CI/CD are continuous integration, continuous delivery, and
+            continuous deployment. Specifically, CI/CD introduces ongoing automation and continuous monitoring
+            throughout the lifecycle of apps, from integration and testing phases to delivery and deployment. Taken
+            together, these connected practices are often referred to as a "CI/CD pipeline" and are supported by
+            development and operations teams working together in an agile way with either a DevOps or site reliability
+            engineering (SRE) approach.</p>
     </div>
 
-     <hr class="featurette-divider">  <!-- /Section 1 -->
+    <hr class="featurette-divider">  <!-- /Section 1 -->
 
     <div class="sections">
         <div class="row featurette">
             <div class="col-md-10">
-                <h2 class="featurette-heading">Branching. <span
-                        class="text-muted">Working on different versions.</span></h2>
-                <p class="lead">The way Git branches is incredibly lightweight, making
-                    branching operations nearly instantaneous, and switching back and forth between branches generally
-                    just as
-                    fast. Git encourages workflows that branch and merge often, even multiple times in a
-                    day. Understanding and mastering this feature gives you a powerful and unique tool and can entirely
-                    change
-                    the way that you develop. Git doesn’t store data as a series of change sets or differences, but
-                    instead as a
-                    series of snapshots.</p>
+                <h2 class="featurette-heading">Github Actions. <span
+                        class="text-muted">Automating the Process.</span></h2>
+                <p class="lead">GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that
+                    allows you to automate your build, test, and deployment pipeline. You can create workflows that
+                    build and test every pull request to your repository, or deploy merged pull requests to
+                    production.</p>
+                <p class="lead">
+                    Project 1 is setup using Gitub actions by configuring a workflow that is triggered when an event
+                    occurs. such as a push or, pull request. The workflow contains one or more jobs which can run in
+                    either sequential order or in parallel.
+                </p>
             </div>
             <div class="col-md-12">
                 <div class="section-img"><img
-                        src="https://www.nobledesktop.com/image/gitresources/git-branches-merge.png" alt=""></div>
+                        src="https://images.contentstack.io/v3/assets/blt300387d93dabf50e/blt4aeae2e1a9667276/5bec093e7971bb6f0bd748d5/github-actions-gitops.png" alt=""></div>
             </div>
         </div>
     </div>
