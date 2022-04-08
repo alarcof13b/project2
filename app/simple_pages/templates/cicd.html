@@ -22,16 +22,36 @@
                 <p class="lead">GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that
                     allows you to automate your build, test, and deployment pipeline. You can create workflows that
                     build and test every pull request to your repository, or deploy merged pull requests to
-                    production.</p>
-                <p class="lead">
-                    Project 1 is setup using Gitub actions by configuring a workflow that is triggered when an event
+                    production. Project 1 is setup using Gitub actions by configuring a workflow that is triggered when
+                    an event
                     occurs. such as a push or, pull request. The workflow contains one or more jobs which can run in
-                    either sequential order or in parallel.
+                    either sequential order or in parallel. Each job will run inside its own virtual machine runner, or
+                    inside a container, and has one or more steps that either run a script that you define or run an
+                    action, which is a reusable extension that can simplify your workflow. Workflows are defined by a
+                    YAML file checked in to your repository and will run when triggered by an
+                    event in your repository, or they can be triggered manually, or at a defined schedule.</p>
+                <p class="lead">
+                    An <strong>Event</strong>
+                    is a specific activity in a repository that triggers a workflow run. A <strong>Job</strong> is a set
+                    of steps in a workflow that execute on the same runner. Each step is either a shell script that will
+                    be executed, or an action that will be run. Steps are executed in order and are dependent on each
+                    other. Since each step is executed on the same runner, you can share data from one step to another.
+                    An <strong>Action</strong> is a custom application for the GitHub Actions platform that performs a
+                    complex but frequently repeated task. Use an action to help reduce the amount of repetitive code
+                    that you write in your workflow files. An action can pull your git repository from GitHub, set up
+                    the correct toolchain for your build environment, or set up the authentication to your cloud
+                    provider. A <strong>Runner</strong> s a server that runs your workflows when they're triggered. Each
+                    runner can run a single job at a time. GitHub provides Ubuntu Linux, Microsoft Windows, and macOS
+                    runners to run your workflows; each workflow run executes in a fresh, newly-provisioned virtual
+                    machine. If you need a different operating system or require a specific hardware configuration, you
+                    can host your own runners.
                 </p>
+
             </div>
             <div class="col-md-12">
                 <div class="section-img"><img
-                        src="https://images.contentstack.io/v3/assets/blt300387d93dabf50e/blt4aeae2e1a9667276/5bec093e7971bb6f0bd748d5/github-actions-gitops.png" alt=""></div>
+                        src="https://images.contentstack.io/v3/assets/blt300387d93dabf50e/blt4aeae2e1a9667276/5bec093e7971bb6f0bd748d5/github-actions-gitops.png"
+                        alt=""></div>
             </div>
         </div>
     </div>
@@ -41,20 +61,20 @@
     <div class="sections">
         <div class="row featurette">
             <div class="col-md-10">
-                <h2 class="featurette-heading">Committing the change. <span
-                        class="text-muted">The setup.</span></h2>
-                <p class="lead">The way Git branches is incredibly lightweight, making
-                    branching operations nearly instantaneous, and switching back and forth between branches
-                    generally just as
-                    fast. Git encourages workflows that branch and merge often, even multiple times in a
-                    day. Understanding and mastering this feature gives you a powerful and unique tool and can
-                    entirely change
-                    the way that you develop. Git doesn’t store data as a series of changesets or differences, but
-                    instead as a
-                    series of snapshots.</p>
+                <h2 class="featurette-heading">Heroku. <span
+                        class="text-muted">The Development Environment.</span></h2>
+                <p class="lead">Heroku is a platform as a service (PaaS) that lets developers build and operate
+                    cloud-based applications. This means that developers can focus on coding without worrying about
+                    managing the infrastructure of their applications. It is built on a management container system and
+                    runs apps in smart containers called dinos which work in a fully managed runtime environment where
+                    developers can deploy their app's code in any of the languages it supports (such as node, ruby,
+                    java, php, python, go, scala, or through 3rd party apps that run on linux). Heroku takes care of
+                    monitoring and patching the system and languages stacks. There are 3 ways to deploy apps, git,
+                    github, and the heroku button.</p>
+
             </div>
             <div class="col-md-12">
-                <div class="section-img"><img src="https://miro.medium.com/max/1204/1*OqKfKe3mqCRbaWT2Y8YDOQ.png"
+                <div class="section-img"><img src="https://cdn.sisense.com/wp-content/uploads/9-Lessons-22-770x445.jpg"
                                               alt=""></div>
             </div>
         </div>
@@ -65,12 +85,29 @@
     <div class="sections">
         <div class="row featurette">
             <div class="col-md-10">
-                <h2 class="featurette-heading">Repositories. <span
-                        class="text-muted">Saving versions of your work.</span></h2>
-                <p class="lead">A repository contains all of your project's files and each file's revision
-                    history. You can discuss and manage your project's work within the repository. You can own
-                    repositories individually, or you can share ownership of repositories with other people in
-                    an organization or collaboration.</p>
+                <h2 class="featurette-heading">Docker. <span
+                        class="text-muted">Pushing Images of the App .</span></h2>
+                <p class="lead">Service containers are Docker containers that provide a simple and portable way for you
+                    to host services that you might need to test or operate your application in a workflow. For example,
+                    your workflow might need to run integration tests that require access to a database and memory
+                    cache. You can configure service containers for each job in a workflow. GitHub creates a fresh
+                    Docker container for each service configured in the workflow, and destroys the service container
+                    when the
+                    job completes. Steps in a job can communicate with all service containers that are part of the same
+                    job. However, you cannot create and use service containers inside a composite action. You can
+                    configure jobs in a workflow to run directly on a runner machine or in a Docker container.
+                    Communication between a job and its service containers is different depending on whether a job runs
+                    directly on the runner machine or in a container.</p>
+                <p class="lead">When you run jobs in a container, GitHub connects service containers to the job using
+                    Docker's user-defined bridge networks. Running the job and services in a container simplifies
+                    network access. You can access a service container using the label you configure in the workflow.
+                    The hostname of the service container is automatically mapped to the label name. When running jobs
+                    directly on the runner machine, you can access service containers using localhost: port or
+                    127.0.0.1: port. GitHub configures the container network to enable communication from the
+                    service container to the Docker host. When a job runs directly on a runner machine, the service
+                    running in
+                    the Docker container does not expose its ports to the job on the runner by default.
+                </p>
             </div>
             <div class="col-md-12">
                 <div class="section-img"><img
@@ -85,14 +122,24 @@
     <div class="sections">
         <div class="row featurette">
             <div class="col-md-10">
-                <h2 class="featurette-heading">Tags. <span
-                        class="text-muted">Marking different points.</span></h2>
-                <p class="lead">Git Tags are specific reference points in the Git history. Git tags are used to capture
-                    the specific point in the history that is further used to point to a released version. A tag does
-                    not change like a branch. They don’t have a further history of commits after being created. Most
-                    people use this feature to mark some release points like (v1.0,…v4.0, and so on). In simple words,
-                    Git Tags are used to give some meaningful name to a particular in the git project repository.
-                    Suppose two users decide to tag their project code for access later.</p>
+                <h2 class="featurette-heading">Proving. <span
+                        class="text-muted">Testing and Deployment.</span></h2>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores blanditiis culpa
+                    cupiditate dolore eaque eligendi ex illum in itaque iusto, laborum natus necessitatibus neque
+                    nesciunt officia pariatur porro praesentium quibusdam quis quo repudiandae sequi similique tenetur
+                    veritatis voluptatum? Ad dolores impedit laudantium, odio provident recusandae velit? A alias
+                    aliquam architecto doloremque enim eum incidunt molestias odio reprehenderit vero. Aliquam assumenda
+                    dolore, dolorem, eos esse facere magni maiores necessitatibus quisquam quo repellendus sapiente
+                    temporibus veniam! Accusamus architecto blanditiis corporis distinctio, dolore eaque eius facere
+                    fuga maiores molestias nobis, optio quidem, temporibus totam ut. Ab alias aliquid, amet aperiam
+                    assumenda consectetur corporis, debitis dicta ea facilis hic natus nisi placeat porro praesentium
+                    quaerat quas sed sint suscipit ut? Blanditiis consequuntur dicta dolorem eligendi excepturi fugiat
+                    harum nemo, quas quasi reiciendis repellendus repudiandae sapiente sint sunt ut velit voluptas.
+                    Aliquam aperiam aut beatae dicta eligendi porro quis? Aut cum cupiditate dolores ducimus ea error,
+                    est eum fugit hic id labore maiores necessitatibus nobis nulla officiis quaerat, quidem, quod
+                    recusandae reiciendis sapiente sequi suscipit temporibus ut voluptates voluptatum? Ab alias aperiam
+                    aspernatur assumenda delectus excepturi expedita fuga hic ipsam itaque iure molestiae mollitia
+                    nesciunt nulla optio possimus, quidem ratione repellat tenetur ut vel veniam..</p>
             </div>
             <div class="col-md-12">
                 <div class="section-img"><img src="https://i.stack.imgur.com/EwBtF.jpg" alt=""></div>
