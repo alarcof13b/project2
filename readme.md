@@ -2,11 +2,11 @@
 
 [![Production Workflow](https://github.com/alarcof13b/anotherflask2/actions/workflows/heroku_awake_prod.yml/badge.svg)](https://github.com/alarcof13b/anotherflask2/actions/workflows/heroku_awake_prod.yml)
 
-* [Production Deployment](https://njit-alarcof01-prod.herokuapp.com/)
+* [Production Deployment](https://alarcof-project01-prod.herokuapp.com/)
 
 [![Development Workflow](https://github.com/alarcof13b/anotherflask2/actions/workflows/heroku_awake_dev.yml/badge.svg)](https://github.com/alarcof13b/anotherflask2/actions/workflows/heroku_awake_dev.yml)
 
-* [Developmental Deployment](https://njit-alarcof01-dev.herokuapp.com/)
+* [Developmental Deployment](https://alarcof-project01-dev.herokuapp.com/)
 
 ## Setting up CI/CD
 
