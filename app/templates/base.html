@@ -9,9 +9,9 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="carousel.css" rel="stylesheet">
     {% block head %}
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 
-        <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
+    <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
     {% endblock %}
 
 </head>
@@ -46,6 +46,20 @@
                     <li>
                         <a href="/about" class="nav-link text-white">About</a>
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Articles
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Pylint & Others</a></li>
+                            <li><a class="dropdown-item" href="#">AAA Testing</a></li>
+                            <li><a class="dropdown-item" href="#">OOPS</a></li>
+                            <li><a class="dropdown-item" href="#">SOLID</a></li>
+                        </ul>
+                    </li>
+
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -63,18 +77,21 @@
         {% endblock %}
     </div>
 
-<!-- FOOTER -->
-  <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; Copyright: {{ year }}, FHA Inc. &middot;  Environment: {{ deployment_environment }} &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer>
+    <!-- FOOTER -->
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>&copy; Copyright: {{ year }}, FHA Inc. &middot; Environment: {{ deployment_environment }} &middot; <a
+                href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
 
-{#    <footer>#}
-{#        Message: {{ mymessage }} {{ format_price(100) }}#}
-{#    </footer>#}
+    {#
+    <footer>#}
+        {# Message: {{ mymessage }} {{ format_price(100) }}#}
+        {#
+    </footer>
+    #}
 
 </main>
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
